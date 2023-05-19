@@ -5,6 +5,10 @@ import Model.Proveedor;
 import Model.Tienda;
 import Vista.View;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 public class PedidoC {
 
     Tienda tienda;
@@ -20,7 +24,7 @@ public class PedidoC {
                     Pedido pedidoTEMP = new Pedido(tienda.getProductos()[i], fechaPedido, tienda.getProductos()[i].getProveedor(), cantidadProd);
                     tienda.getPedidos()[tienda.nPedidos] = pedidoTEMP;
                     tienda.nPedidos++;
-/*
+
                     try {
                         FileOutputStream fos = new FileOutputStream("tienda.ser");
                         ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -30,7 +34,7 @@ public class PedidoC {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-*/
+
                     return true;
                 }
             }

@@ -22,7 +22,7 @@ public class ProvC {
 
         tienda.getProveedores()[tienda.nProovedores] = proveedor;
         tienda.nProovedores++;
-/*
+
         try {
             FileOutputStream fos = new FileOutputStream("tienda.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -33,7 +33,7 @@ public class ProvC {
             e.printStackTrace();
         }
 
- */
+
         return true;
     }
 
@@ -83,7 +83,7 @@ public class ProvC {
                     break;
             }
         } while (opcion != 0);
-/*
+
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
             out.writeObject(tienda);
@@ -93,7 +93,6 @@ public class ProvC {
         }
 
 
- */
         return true;
     }
 
@@ -109,7 +108,7 @@ public class ProvC {
 
                 ProvC.bubbleSort(tienda);
                 // Serialize the updated Tienda object after modifying the Producto
-               /*
+
                 try {
                     ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
                     out.writeObject(tienda);
@@ -118,7 +117,7 @@ public class ProvC {
                     System.out.println("Error: " + ex.getMessage());
                 }
 
-                */
+
                 return true;
             }
         }

@@ -48,7 +48,7 @@ public class FacturaC {
         tempCliete.nFacturas++;
         tienda.getFacturas()[tienda.nFacturas]=temp;
         tienda.nFacturas++;
-/*
+
         try {
             FileOutputStream fos = new FileOutputStream("tienda.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -58,7 +58,7 @@ public class FacturaC {
         } catch (IOException e) {
             e.printStackTrace();
         }
- */
+
         return true;
     }
     public static void mostrarFacturasCliente(View view, Tienda tienda){

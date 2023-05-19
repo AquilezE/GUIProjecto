@@ -68,7 +68,7 @@ public class ProductoC {
                     break;
             }
         } while (opcion != 0);
-/*
+
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
             out.writeObject(tienda);
@@ -76,7 +76,7 @@ public class ProductoC {
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());
         }
-*/
+
         return true;
 
     }
@@ -93,7 +93,7 @@ public class ProductoC {
 
                 TiendaC.bubbleSort(tienda);
                 tienda.nInventory=tienda.nInventory-1;
-/*
+
                 try {
                     ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
                     out.writeObject(tienda);
@@ -102,7 +102,7 @@ public class ProductoC {
                     System.out.println("Error: " + ex.getMessage());
                 }
 
- */
+
                 return true;
             }
         }

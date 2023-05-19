@@ -27,7 +27,7 @@ public class ClienteC {
 
         tienda.getClientes()[tienda.nClientes] =cliente;
         tienda.setnClientes(tienda.nClientes + 1);
-/*
+
         try {
             FileOutputStream fos = new FileOutputStream("tienda.ser");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -38,7 +38,7 @@ public class ClienteC {
             e.printStackTrace();
         }
 
- */
+
         return true;
     }
 
@@ -92,7 +92,7 @@ public class ClienteC {
                     break;
             }
         } while (opcion != 0);
-/*
+
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
             out.writeObject(tienda);
@@ -100,7 +100,7 @@ public class ClienteC {
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());
         }
-*/
+
         return true;
 
     }
@@ -116,7 +116,7 @@ public class ClienteC {
 
                 ClienteC.bubbleSort(tienda);
                 // Serializa tienda despues de eliminar el cliente
-                /*
+
                 try {
                     ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("tienda.ser"));
                     out.writeObject(tienda);
@@ -124,7 +124,7 @@ public class ClienteC {
                 } catch (IOException ex) {
                     System.out.println("Error: " + ex.getMessage());
                 }
-                 */
+
                 return true;
             }
         }
