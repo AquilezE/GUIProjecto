@@ -1,12 +1,10 @@
 package Ventanas;
 import Controlador.TiendaC;
-
 import Vista.View;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -14,7 +12,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import javax.swing.JLabel;
 
 
@@ -58,7 +55,7 @@ public class AgregarProductoVentana extends JFrame{
         tfProveedor=new JTextField("",10);
         tfNumSerie= new JTextField("",10);
 
-        lTitulo=new JLabel("Registro de Producto");
+        lTitulo=new JLabel("Registro de Proveedor");
         lCodigo=new JLabel("Codigo");
         lPrecioVenta=new JLabel("Precio de venta");
         lDescuento=new JLabel("Descuento");
@@ -139,7 +136,9 @@ public class AgregarProductoVentana extends JFrame{
     }
 
     class escuchaGuardar implements ActionListener{
+   
         public void actionPerformed(ActionEvent e) {
+        
             
             String codigo=tfCodigo.getText();
             float precioVenta = Float.parseFloat(tfPrecioVenta.getText());
@@ -173,9 +172,11 @@ public class AgregarProductoVentana extends JFrame{
              tfNumeroDeExistencias.setText("");
              tfProveedor.setText("");
              tfCodigo.requestFocus();
-             //este sout es solo para ver que si los guarda
-             System.out.println("codigo "+codigo+ " y el nombre del proveedor es "+proveedor);
+             setVisible(false);
+             dispose();
+
         }
+        
     }
    
     
