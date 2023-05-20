@@ -1,13 +1,15 @@
 import Controlador.*;
 import Model.*;
+import Ventanas.AgregarClienteVentana;
 import Vista.*;
 import Ventanas.AgregarProductoVentana;
+import Ventanas.AgregarProveedorVentana;
 
 import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-
+       
         //Deserializa lat tienda si tienda.ser existe
         Tienda tienda;
 
@@ -190,9 +192,7 @@ public class Main {
                             
                             View.cleanConsole();
                             ProveedorV.mostrarProveedoresNombre(view,tienda);
-                            AgregarProductoVentana ventanaProducto=new AgregarProductoVentana(controller);
-                            ProdV.addProd(controller,view);
-
+                           AgregarProductoVentana ventanaProducto=new AgregarProductoVentana(controller);
                             break;
                         case 2:
                             View.cleanConsole();
@@ -241,8 +241,7 @@ public class Main {
                     switch (opcion) {
                         case 1:
                             View.cleanConsole();
-
-                            ProveedorV.addProveedor(view,controllerP);
+                          AgregarProveedorVentana ventana= new AgregarProveedorVentana(controllerP);
                             break;
                         case 2:
                             View.cleanConsole();
@@ -290,8 +289,7 @@ public class Main {
                     switch (opcion){
                         case 1:
                             View.cleanConsole();
-
-                            ClienteV.addCliente(view,controllerC);
+                            AgregarClienteVentana ventana=new AgregarClienteVentana(controllerC);
 
                             break;
                         case 2:
